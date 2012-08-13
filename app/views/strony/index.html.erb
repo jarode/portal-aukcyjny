@@ -1,0 +1,11 @@
+<h1>Index</h1>
+<% @aukcje.each do |aukcja| %>
+<div class="entry">
+
+<h3><%= aukcja.nazwa %></h3>
+<%= sanitize(aukcja.opis) %>
+
+<span class="price"><%= aukcja.termin %></span>
+<span class="price"><%= aukcja.budzet %></span>
+</div>
+<% end %>

@@ -1,6 +1,10 @@
 Portalaukcyjny::Application.routes.draw do
+  get "strony/index"
+
   resources :aukcjas
 
+
+  root to: 'strony#index', as: 'index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
