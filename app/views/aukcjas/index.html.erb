@@ -1,0 +1,29 @@
+<h1>Listing aukcjas</h1>
+
+<table>
+  <tr>
+    <th>Nazwa</th>
+    <th>Opis</th>
+    <th>Termin</th>
+    <th>Budzet</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @aukcjas.each do |aukcja| %>
+  <tr>
+    <td><%= aukcja.nazwa %></td>
+    <td><%= aukcja.opis %></td>
+    <td><%= aukcja.termin %></td>
+    <td><%= aukcja.budzet %></td>
+    <td><%= link_to 'Show', aukcja %></td>
+    <td><%= link_to 'Edit', edit_aukcja_path(aukcja) %></td>
+    <td><%= link_to 'Destroy', aukcja, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Aukcja', new_aukcja_path %>

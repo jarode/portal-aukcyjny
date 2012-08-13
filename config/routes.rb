@@ -1,4 +1,6 @@
 Portalaukcyjny::Application.routes.draw do
+  resources :aukcjas
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

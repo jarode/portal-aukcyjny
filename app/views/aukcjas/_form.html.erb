@@ -1,0 +1,33 @@
+<%= form_for(@aukcja) do |f| %>
+  <% if @aukcja.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aukcja.errors.count, "error") %> prohibited this aukcja from being saved:</h2>
+
+      <ul>
+      <% @aukcja.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nazwa %><br />
+    <%= f.text_field :nazwa %>
+  </div>
+  <div class="field">
+    <%= f.label :opis %><br />
+    <%= f.text_area :opis %>
+  </div>
+  <div class="field">
+    <%= f.label :termin %><br />
+    <%= f.text_field :termin %>
+  </div>
+  <div class="field">
+    <%= f.label :budzet %><br />
+    <%= f.text_field :budzet %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
